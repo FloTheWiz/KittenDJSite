@@ -17,6 +17,9 @@ There is no redemption past this point
 
 
 Main Styles */
+html, body {
+  height: 100%;
+}
 body {
     background-color: #121212; /* Darker black for better contrast */
     color: white;
@@ -322,31 +325,30 @@ a:hover {
     text-align: center; /* Center align text */
     text-wrap:pretty;
 }
-
-.wrapper {
+.page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -23px; 
+  margin-bottom: -35px; 
 }
-.wrapper:after {
+.page-wrap:after {
   content: "";
   display: block;
 }
-.footer, .wrapper:after {
-  height: 23px; /* fuck it magic number /*
+.footer, .page-wrap:after {
+  height: 35px; 
 }
+
 .footer {
+    padding-top: 10px;
+    border-top: 4px solid #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 3px;
     text-align: center;
-    width: 80%;
     background-color: 2f2f2f;
 }
-
-.footer a {
-  color: var(--tertiary-color);
 
 
 /* Utility classes */

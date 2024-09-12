@@ -1,0 +1,342 @@
+/*CC Fonts ftw*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2? family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --main-color:  #af1f67;
+  --off-color: #d6435d;
+  --tertiary-color: #f16e52;
+  --accent-color: #00736e; 
+  --off-accent-color: #00a9a2;
+}
+
+/*
+Sins have been committed in this file 
+There is no redemption past this point 
+
+
+
+Main Styles */
+body {
+    background-color: #121212; /* Darker black for better contrast */
+    color: white;
+    font-family: Merriweather, serif;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: Merriweather Sans, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+a {
+    color: #6ab0ff; /* Light blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4093e0; /* Slightly darker blue on hover */
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+    color: white;
+    padding: 40px 0;
+    border-bottom: 4px solid #333; /* Subtle border at the bottom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-image {
+    width: 150px; /* Adjust the size as needed */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-text {
+    background: #1e1e1e; /* Dark overlay for better text contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    box-shadow: 5 -10px -10px rgba(76,76,76,0.3); /* Light grey in Negative */
+}
+
+.header-text h1 {
+    font-size: 64px;
+    background-image: linear-gradient(45deg, var(--main-color), var(--tertiary-color));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.header-text h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.header-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 10px 0;
+    font-family: Merriweather Sans, sans-serif;
+    font-weight: 300;
+}
+
+/* Command Help Section */
+.command_help {    
+    margin: 10px;
+    padding:10px;
+}
+
+.command_help h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #f16e52; /* Accent color for heading */
+}
+
+.command_help p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #ccc; /* Slightly lighter text color for better readability */
+}
+
+.command_help p:first-of-type {
+    margin-top: 0;
+}
+
+.command_help p:last-of-type {
+    margin-bottom: 0;
+}
+
+.category_description {
+    font-size: 21px;
+    margin: 15px 0px;
+    color: #ccc; /* Slightly lighter text color for better readability */
+}
+
+.category_description a {
+  color: var(--tertiary-color);
+}
+.command_example {
+    color: var(--main-color);
+}
+/* Command Card Section */
+.commands::-webkit-scrollbar {
+    display: none;
+}
+
+.commands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: hidden;
+}
+
+.command_row {
+    background-color: #1c1c1c;
+    width: 100%;
+    padding: 24px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    overflow-x: auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+
+.command_row::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+/* Command Card */
+.command_card {
+    background-color: #2a2a2a; /* Darker card background */
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    transition: background-color 0.4s, color 0.4s, transform 0.2s, box-shadow 0.3s;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    overflow: hidden; /* Ensure content does not overflow */
+    cursor: pointer;
+    flex: 0 0 auto; /* Allows content to grow and take available space */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+/* Maintain Consistent Height */
+.command_card .content {
+    flex: 1; /* Allows content area to grow and take available space */
+}
+
+.command_card:hover {
+    background-color: #333; /* Subtle hover effect */
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.command_card:hover .command_desc,
+.command_card:hover .command_example,
+.command_card:hover .aliases {
+    background-image: linear-gradient(120deg, var(--main-color), var(--tertiary-color)); /* Subtle blue gradient */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    animation: sweep 0.6s ease forwards;
+}
+
+@keyframes sweep {
+    0% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.9); }
+}
+.command_card.clicked::before {
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    animation: fadeInOut 1.5s ease forwards;
+}
+
+.command_card:not(.clicked)::before {
+    opacity: 0;
+}
+.command_card.clicked {
+    background: linear-gradient(45deg, var(--off-color), var(--tertiary-color)); /* Flashy background */
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.4);
+    opacity: 0.9;
+}
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .command_row {
+        flex-direction: column;
+    }
+
+    .command_card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .command_card {
+        width: 80%;
+    }
+}
+/* Components of Command Card */
+.command_category {
+    font-weight: 800;
+    font-size: 28px;
+    margin: 0 0 10px;
+}
+
+.command_title {
+    font-weight: 700; /* Adjusted weight for a cleaner look */
+    font-family: Merriweather, serif;
+    font-size: 22px;
+    margin: 0;
+    text-decoration: underline;
+    color: #e0e0e0; 
+}
+
+.command_desc {
+    font-style: italic;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.command_example {
+    font-size: 18px;
+}
+/* Alias Cards */
+.alias_card {
+    background-color: #444; /* Slightly lighter than card background */
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    min-height: 45%; /* Ensure a minimum height for consistency */
+    box-sizing: border-box; /* Include padding in height calculation */
+    overflow: hidden; /* Handle any overflow */
+    min-height:130px;
+}
+
+.aliases {
+    font-style: italic;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.4; /* Adjust line height for better spacing */
+    text-align: center; /* Center align text */
+    text-wrap:pretty;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    background-color: 2f2f2f;
+}
+.footer a {
+  color: var(--tertiary-color);
+
+
+/* Utility classes */
+.hidden {
+    display: none;
+}

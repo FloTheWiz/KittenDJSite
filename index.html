@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kitten DJs - A WIP music bot for Dashnet Forums with extensive command functionality.">
+    <meta name="keywords" content="Discord Bot, Music Bot, Kitten DJs, Dashnet Forums, Music Commands, Slash Commands">
+    <meta name="author" content="Flo">
+    <title>Kitten DJs - Music Bot for Dashnet Forums</title>
+    <link rel="icon" href="https://cdn.discordapp.com/avatars/1267073666567503892/a_108a6b1cf6dc8234a8354ff98e8de7b8.gif?size=1024" type="image/gif">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add any external CSS or font links here -->
+</head>
+<body>
+
+    <!-- HEADER, includes Image and a little about the bot-->
+    <header class="header">
+        <div class="header-content">
+            <img src="https://cdn.discordapp.com/avatars/1267073666567503892/a_108a6b1cf6dc8234a8354ff98e8de7b8.gif?size=1024" alt="Pixel Art Grandma" class="header-image">
+            <div class="header-text">
+                <h1>Kitten DJs</h1>
+                <h2>Dashnet Forum's Music Bot</h2>
+                <p>Kitten DJs is a WIP music bot for Dashnet Forums.</p>
+                <p>All commands below work as slash commands <span onclick="copyCommandText('/', this, event)" style="color: var(--tertiary-color); cursor: pointer;">/</span>, but also work with the bot's prefix <span onclick="copyCommandText(';', this, event)" style="cursor: pointer; color: var(--tertiary-color);">;</span> or by pinging the bot <span onclick="copyCommandText('<@1267073666567503892>', this, event)" style="cursor: pointer; color: var(--tertiary-color);">@Kitten DJs #2957</span>.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Command Help -->
+    <section class="command_help">
+        <h3>Command Help</h3>
+        <p><strong>&lt;Parameter&gt;</strong> is required</p>
+        <p><strong>[Parameter]</strong> is optional</p>
+        <p><strong>|</strong> refers to mutually exclusive arguments</p>
+    </section>
+
+    <!-- Commands -->
+    <section class="commands">
+        <h2 class="command_category">Music</h2>
+        <p class="category_description">Play music in the <a href="https://discord.com/channels/412363381891137536/419065933844316162">Music Channel</a> on Dashnet Forums.</p>
+        <div class="command_row">
+
+            <!-- Join Command Card -->    
+            <div class="command_card" onclick="copyCommandText('/join', this, event)">
+                <p class="command_title">Join</p>
+                <p class="command_example">/join [Channel]</p>
+                <p class="command_desc">Joins the voice channel you're in, or a specified one.</p>
+                <div class="alias_card">
+                    <p>Aliases</p>
+                    <p class="aliases">;j ;summon</p>
+                </div>
+            </div>
+
+            <!-- Play Command Card -->
+            <div class="command_card" onclick="copyCommandText('/play &lt; Song Name or Youtube Link &gt;', this, event)">
+                <p class="command_title">Play</p>
+                <p class="command_example">/play &lt;Song Title | Youtube Link&gt;</p>
+                <p class="command_desc">Plays a song or adds it to the queue. Also summons the bot if it's not already in your channel.</p>
+                <div class="alias_card">
+                    <p>Aliases</p>
+                    <p class="aliases">;p ;add ;append ;a ;blast</p>
+                </div>
+            </div>
+
+            <!-- Now Playing Command Card -->    
+            <div class="command_card" onclick="copyCommandText('/nowplaying', this, event)">
+                <p class="command_title">Now Playing</p>
+                <p class="command_example">/nowplaying</p>
+                <p class="command_desc">Shows the currently playing song.</p>
+                <div class="alias_card">
+                    <p>Aliases</p>
+                    <p class="aliases">;np ;playing ;current</p>
+                </div>
+            </div>
+
+            <!-- Queue Command Card -->
+            <div class="command_card" onclick="copyCommandText('/queue', this, event)">
+                <p class="command_title">Queue</p>
+                <p class="command_example">/queue [page number]</p>
+                <p class="command_desc">Shows up to 25 songs. Use page number for if your queue has more than 1 page.</p>
+                <div class="alias_card">
+                    <p>Aliases</p>
+                    <p class="aliases">;q ;list ;l</p>
+                </div>
+            </div>
+
+            <!-- Remove Command Card -->    
+            <div class="command_card" onclick="copyCommandText('/remove &lt;index&gt;', this, event)">
+                <p class="command_title">Remove</p>
+                <p class="command_example">/remove &lt;index&gt;</p>
+                <p class="command_desc">Removes the song at the specified index. Use -1 for the last queued song.</p>
+                <div class="alias_card">
+                    <p>Aliases</p>
+                    <p class="aliases">;del ;r</p>
+                </div>
+            </div>
+
+            <!-- Skip Command Card -->    
+            <div class="command_card" onclick="copyCommandText('/skip', this, event)">
+                <p class="command_title">Skip</p>
+                <p class="command_example">/skip</p>
+                <p class="command_desc">Votes to skip the current song.</p>
+                <div class="alias_card">
+                    <p>Aliases</p>
+                    <p class="aliases">;s</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with <a class="src" href="https://github.com/SneetSnart420/KittenDJSite">❤️</a> by <a href="https://github.com/SneetSnart420/">Flo</a></p>
+        <p style="font-size:8px;">:3</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
